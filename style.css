@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+
+#cursor{
+    height: 7vw;
+    width: 7vw;
+    background-color: #FF5F38;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+}
+
+#cursor h5{
+    font-size: 1.2vw;
+    font-weight: 500;
+}
+
+
+#page1{
+    width: 100%;
+    height: 100vh;
+    
+    position: relative;
+}
+
+#page1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+ 
+}
+
+#page1 video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+#page1-content{
+    height: 100%;
+    width: 100%;
+    /* background-color: rgba(0, 0, 0, 0.321); */
+    position: relative;
+    z-index: 10;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+   
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+   
+    padding: 2vw 3vw;
+}
+
+nav h3{
+    font-size: 1.4vw;
+}
+nav h4{
+    font-size: 1.4vw;
+    font-weight: 100;
+}
+
+#page1-content h1{
+    font-family: 'Courier New';
+    font-size: 10vw;
+    line-height: 2vw;
+    padding-bottom: 3vw;
+}
+#page1-content h1 span{
+    display: inline-block;
+}
+
+#page2{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+
+#loader{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #000;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    gap: 10px;
+}
+
+#loader h3{
+    font-size: 2vw;
+    font-weight: 100;
+}
+
+#full-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-content {
+  text-align: center;
+}
+
+#full-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+#full-nav ul li {
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+
+#close-nav {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #aaa;
+}
+
+#page1 nav h4 {
+  cursor: pointer;
+}
