@@ -60,10 +60,11 @@ html, body {
     z-index: 10;
     color: white;
     display: flex;
-    align-items: center;
     flex-direction: column;
-    justify-content: space-between;
-   
+    justify-content: flex-start;
+    text-align: left;
+    gap: 2vw;
+
 }
 nav{
     display: flex;
@@ -86,7 +87,9 @@ nav h4{
     font-family: 'Courier New';
     font-size: 10vw;
     line-height: 2vw;
-    padding-bottom: 3vw;
+    padding-top: 5vw;
+    padding-left: 3vw;
+    /* padding-bottom: 3vw; */
 }
 #page1-content h1 span{
     display: inline-block;
