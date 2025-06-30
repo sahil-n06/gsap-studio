@@ -11,7 +11,6 @@ body {
   height: 100%;
 }
 
-<<<<<<< HEAD
 #cursor {
   height: 7vw;
   width: 7vw;
@@ -23,20 +22,6 @@ body {
   align-items: center;
   justify-content: center;
   transform: translate(-50%, -50%);
-=======
-
-#cursor{
-    height: 7vw;
-    width: 7vw;
-    background-color: #DC2751;
-    border-radius: 50%;
-    position: fixed;
-    z-index: 9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: translate(-50%, -50%);
->>>>>>> b77cdcb3c1be0259ba178152f93ac8a4f55e70e6
 }
 
 #cursor h5 {
@@ -78,7 +63,6 @@ body {
   text-align: left;
   gap: 2vw;
 }
-<<<<<<< HEAD
 nav {
   display: flex;
   justify-content: space-between;
@@ -86,15 +70,6 @@ nav {
   width: 100%;
 
   padding: 2vw 3vw;
-=======
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    
-    padding: 2vw 3vw;
->>>>>>> b77cdcb3c1be0259ba178152f93ac8a4f55e70e6
 }
 
 nav h3 {
@@ -127,7 +102,6 @@ nav h4 {
 }
 
 #page1-content button {
-<<<<<<< HEAD
   padding: 0.6vw 1.5vw;
   width: 10rem;
   margin: 0 0 0 3.3rem;
@@ -141,21 +115,6 @@ nav h4 {
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(255, 95, 56, 0.3);
-=======
-    padding: 0.6vw 1.5vw;
-    width: 10rem;
-    margin: 0 0 0 3.3rem;
-    background-color: #DC2751;
-    color: white;
-    font-size: 1vw;
-    font-family: 'Gilroy', sans-serif;
-    font-weight: 500;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(255, 95, 56, 0.3);
->>>>>>> b77cdcb3c1be0259ba178152f93ac8a4f55e70e6
 }
 
 button:hover {
@@ -252,57 +211,20 @@ button:hover {
   pointer-events: none;
 }
 
-
 .nav-content {
   text-align: center;
-<<<<<<< HEAD
   padding: 1rem;
-=======
-  position: relative;
->>>>>>> b77cdcb3c1be0259ba178152f93ac8a4f55e70e6
   width: 100%;
 }
 
 #full-nav ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 #full-nav ul li {
-<<<<<<< HEAD
   margin: 2rem 0;
-=======
-  margin: 1.5rem 0;
->>>>>>> b77cdcb3c1be0259ba178152f93ac8a4f55e70e6
   font-size: 2rem;
-  font-weight: 500;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-#full-nav ul li a {
-  color: white;
-  text-decoration: none;
-  position: relative;
-}
-
-#full-nav ul li a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  left: 0;
-  bottom: -5px;
-  background-color: #ffffff;
-  transition: width 0.3s ease;
-}
-
-#full-nav ul li a:hover::after {
-  width: 100%;
-}
-
-#full-nav ul li a:hover {
-  color: #DC2751;
 }
 
 #full-nav ul li a {
@@ -354,7 +276,6 @@ button:hover {
   cursor: pointer;
 }
 
-<<<<<<< HEAD
 /* PODCAST PAGE-3 */
 #page3 {
   background: #fff;
@@ -448,10 +369,6 @@ button:hover {
     padding: 0;
   }
 }
-=======
-
-
->>>>>>> b77cdcb3c1be0259ba178152f93ac8a4f55e70e6
 
 /* PHOTOSHOOT PAGE-4 */
 #page4 {
@@ -466,7 +383,7 @@ button:hover {
   padding: 0 24px;  /* Added horizontal padding */
 }
 .photoshoot-title {
-  font-size: 7rem;
+  font-size: 3rem;
   font-weight: 900;
   letter-spacing: 2px;
   margin-bottom: 10px;
@@ -497,7 +414,7 @@ button:hover {
 .photoshoot-features {
   display: flex;
   flex-direction: column;
-  gap: 58px;
+  gap: 28px;
   flex: 1 1 320px;
   max-width: 320px;
 }
@@ -526,17 +443,11 @@ button:hover {
   opacity: 0.85;
 }
 .photoshoot-image img {
-<<<<<<< HEAD
   width: 200px;
-=======
-  width: 31.25rem;
->>>>>>> b77cdcb3c1be0259ba178152f93ac8a4f55e70e6
   max-width: 95vw;
   border-radius: 14px;
   object-fit: cover;
-
-  transform: translateY(8.1rem) translateX(-16rem);
-
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 @media (max-width: 1100px) {
   .photoshoot-content {
@@ -567,7 +478,7 @@ button:hover {
   text-align: center;
 }
 .live-stream-title {
-  font-size: 5.8rem;
+  font-size: 3.5rem;
   margin-bottom: 24px;
   letter-spacing: 3px;
 }
@@ -584,26 +495,25 @@ button:hover {
   max-width: 900px;
   margin: 0 auto 48px auto;
 }
-
 .live-stream-content {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  /* gap: 48px; */
+  gap: 48px;
   margin-top: 36px;
   flex-wrap: wrap;
 }
 .live-stream-image img {
-  width: 820px;
+  width: 520px;
   max-width: 95vw;
-  border-radius: 0px;
+  border-radius: 14px;
   object-fit: cover;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 .live-stream-features {
   background: #d7264b;
   color: #fff;
-  border-radius: 0px;
+  border-radius: 10px;
   padding: 36px 0 36px 0;
   min-width: 340px;
   max-width: 340px;
@@ -623,22 +533,18 @@ button:hover {
   align-items: center;
   font-weight: 500;
 }
-
+.live-stream-features li.active,
+.live-stream-features li:first-child {
+  background: #fff;
+  color: #23232b;
+  font-weight: 700;
+}
 .live-stream-features li span {
   font-weight: bold;
   margin-right: 18px;
   color: #d7264b;
   font-size: 1.25em;
 }
-
-.live-stream-features li:hover {
-  background: #fff;
-  color: #d7264b;
-}
-.live-stream-features li:hover span {
-  color: #d7264b;
-}
-
 @media (max-width: 1100px) {
   .live-stream-content {
     flex-direction: column;
@@ -668,7 +574,7 @@ button:hover {
   text-align: left;
 }
 .videography-title {
-  font-size: 6rem;
+  font-size: 3rem;
   font-weight: 900;
   letter-spacing: 2px;
   margin-bottom: 10px;
@@ -683,7 +589,7 @@ button:hover {
 }
 .videography-desc {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   max-width: 600px;
   margin-bottom: 32px;
   opacity: 0.85;
@@ -699,14 +605,14 @@ button:hover {
 .videography-features {
   display: flex;
   flex-direction: column;
-  gap: 38px;
+  gap: 28px;
   flex: 1 1 320px;
   max-width: 420px;
 }
 .videography-features .feature {
   display: flex;
   align-items: flex-start;
-  gap: 28px;
+  gap: 18px;
   color: #fff;
 }
 .videography-features .icon {
@@ -716,7 +622,7 @@ button:hover {
 }
 .videography-features b {
   color: #fff;
-  font-size: 1.8rem;
+  font-size: 1.15rem;
   margin-bottom: 2px;
   display: inline-block;
 }
@@ -727,11 +633,11 @@ button:hover {
   opacity: 0.85;
 }
 .videography-image img {
-  width: 55rem;
+  width: 420px;
   max-width: 95vw;
-  transform: translateX(20rem) translateY(-5rem);
+  border-radius: 14px;
   object-fit: cover;
-
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 @media (max-width: 1100px) {
   .videography-content {
@@ -1348,7 +1254,6 @@ button:hover {
   box-sizing: border-box;
 }
 
-<<<<<<< HEAD
 html, body {
   overflow-x: hidden; /* Prevent horizontal scroll */
 }
@@ -1731,5 +1636,3 @@ a:focus, button:focus {
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
-=======
->>>>>>> b77cdcb3c1be0259ba178152f93ac8a4f55e70e6
