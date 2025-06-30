@@ -90,6 +90,9 @@ tl.to("#loader",{
 })
 
 
+
+
+
 // GSAP navbar animation
 const menuBtn = document.querySelector("#page1 nav h4");
 const fullNav = document.querySelector("#full-nav");
@@ -116,3 +119,6 @@ closeBtn.addEventListener("click", () => {
     pointerEvents: "none"
   });
 });
+
+
+
