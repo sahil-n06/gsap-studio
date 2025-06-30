@@ -14,7 +14,7 @@ html, body {
 #cursor{
     height: 7vw;
     width: 7vw;
-    background-color: #FF5F38;
+    background-color: #DC2751;
     border-radius: 50%;
     position: fixed;
     z-index: 9;
@@ -109,7 +109,7 @@ nav h4{
     padding: 0.6vw 1.5vw;
     width: 10rem;
     margin: 0 0 0 3.3rem;
-    background-color: #FF5F38;
+    background-color: #DC2751;
     color: white;
     font-size: 1vw;
     font-family: 'Gilroy', sans-serif;
@@ -356,7 +356,7 @@ button:hover {
   max-width: 95vw;
   border-radius: 14px;
   object-fit: cover;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+
   transform: translateY(8.1rem) translateX(-16rem);
 
 }
@@ -389,7 +389,7 @@ button:hover {
   text-align: center;
 }
 .live-stream-title {
-  font-size: 3.5rem;
+  font-size: 5.8rem;
   margin-bottom: 24px;
   letter-spacing: 3px;
 }
@@ -406,25 +406,26 @@ button:hover {
   max-width: 900px;
   margin: 0 auto 48px auto;
 }
+
 .live-stream-content {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 48px;
+  /* gap: 48px; */
   margin-top: 36px;
   flex-wrap: wrap;
 }
 .live-stream-image img {
-  width: 520px;
+  width: 820px;
   max-width: 95vw;
-  border-radius: 14px;
+  border-radius: 0px;
   object-fit: cover;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 .live-stream-features {
   background: #d7264b;
   color: #fff;
-  border-radius: 10px;
+  border-radius: 0px;
   padding: 36px 0 36px 0;
   min-width: 340px;
   max-width: 340px;
@@ -444,18 +445,22 @@ button:hover {
   align-items: center;
   font-weight: 500;
 }
-.live-stream-features li.active,
-.live-stream-features li:first-child {
-  background: #fff;
-  color: #23232b;
-  font-weight: 700;
-}
+
 .live-stream-features li span {
   font-weight: bold;
   margin-right: 18px;
   color: #d7264b;
   font-size: 1.25em;
 }
+
+.live-stream-features li:hover {
+  background: #fff;
+  color: #d7264b;
+}
+.live-stream-features li:hover span {
+  color: #d7264b;
+}
+
 @media (max-width: 1100px) {
   .live-stream-content {
     flex-direction: column;
@@ -485,7 +490,7 @@ button:hover {
   text-align: left;
 }
 .videography-title {
-  font-size: 3rem;
+  font-size: 6rem;
   font-weight: 900;
   letter-spacing: 2px;
   margin-bottom: 10px;
@@ -500,7 +505,7 @@ button:hover {
 }
 .videography-desc {
   color: #fff;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   max-width: 600px;
   margin-bottom: 32px;
   opacity: 0.85;
@@ -516,14 +521,14 @@ button:hover {
 .videography-features {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 38px;
   flex: 1 1 320px;
   max-width: 420px;
 }
 .videography-features .feature {
   display: flex;
   align-items: flex-start;
-  gap: 18px;
+  gap: 28px;
   color: #fff;
 }
 .videography-features .icon {
@@ -533,7 +538,7 @@ button:hover {
 }
 .videography-features b {
   color: #fff;
-  font-size: 1.15rem;
+  font-size: 1.8rem;
   margin-bottom: 2px;
   display: inline-block;
 }
@@ -544,11 +549,11 @@ button:hover {
   opacity: 0.85;
 }
 .videography-image img {
-  width: 420px;
+  width: 55rem;
   max-width: 95vw;
-  border-radius: 14px;
+  transform: translateX(20rem) translateY(-5rem);
   object-fit: cover;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+
 }
 @media (max-width: 1100px) {
   .videography-content {
