@@ -94,6 +94,9 @@ tl.to("#loader",{
 
 
 // GSAP navbar animation
+
+
+function gsapNavbarAnimation() {
 const menuBtn = document.querySelector("#page1 nav h4");
 const fullNav = document.querySelector("#full-nav");
 const closeBtn = document.querySelector("#close-nav");
@@ -120,5 +123,215 @@ closeBtn.addEventListener("click", () => {
   });
 });
 
+}
+gsapNavbarAnimation()
 
+
+function gsapcardAnimation() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Scroll Reveal
+  gsap.from(".portfolio-card", {
+    scrollTrigger: {
+      trigger: ".portfolio-cards",
+      start: "top 80%",
+      scroller: "#page10", // 🔥 This line is the missing link
+    },
+    y: 50,
+    opacity: 0,
+    duration: 1.2,
+    ease: "power3.out",
+    stagger: 0.2
+  });
+
+  // Hover Elastic Zoom
+  document.querySelectorAll(".portfolio-card").forEach(card => {
+    card.addEventListener("mouseenter", () => {
+      gsap.to(card, {
+        scale: 1.04,
+        duration: 0.4,
+        ease: "elastic.out(1, 0.4)"
+      });
+    });
+
+    card.addEventListener("mouseleave", () => {
+      gsap.to(card, {
+        scale: 1,
+        duration: 0.3,
+        ease: "power2.out"
+      });
+    });
+  });
+
+  // Optional: Image zoom on hover
+  document.querySelectorAll(".portfolio-card img").forEach(img => {
+    img.addEventListener("mouseenter", () => {
+      gsap.to(img, { scale: 1.1, duration: 0.5, ease: "power2.out" });
+    });
+    img.addEventListener("mouseleave", () => {
+      gsap.to(img, { scale: 1, duration: 0.5, ease: "power2.inOut" });
+    });
+  });
+}
+
+
+gsapcardAnimation()
+
+
+
+// 👇 Add this once GSAP and TextPlugin are loaded
+gsap.registerPlugin(TextPlugin);
+
+function setupPricingSwitcher() {
+  const toggleButtons = document.querySelectorAll(".pricing-toggle button");
+
+  toggleButtons.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      // Toggle active class
+      toggleButtons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      // Decide between monthly/yearly
+      const type = index === 0 ? "monthly" : "yearly";
+
+      // Loop over all pricing cards and update
+      document.querySelectorAll(".pricing-card").forEach(card => {
+        const priceEl = card.querySelector(".plan-price");
+        const durationEl = card.querySelector(".plan-duration");
+
+        const newPrice = priceEl.dataset[type];
+        const newDuration = durationEl.dataset[type];
+
+        // Animate price text
+        gsap.to(priceEl, {
+          textContent: `$${newPrice}`,
+          duration: 0.5,
+          ease: "power2.out",
+        });
+
+        // Animate duration
+        gsap.to(durationEl, {
+          textContent: newDuration,
+          duration: 0.4,
+          ease: "power1.out"
+        });
+      });
+    });
+  });
+}
+
+setupPricingSwitcher();
+
+
+function pricingCardHoverEffects() {
+  document.querySelectorAll(".pricing-card").forEach(card => {
+    card.addEventListener("mouseenter", () => {
+      gsap.to(card, {
+        scale: 1.05,
+        boxShadow: "0 16px 32px rgba(0, 0, 0, 0.15)",
+        duration: 0.3,
+        ease: "power2.out"
+      });
+    });
+
+    card.addEventListener("mouseleave", () => {
+      gsap.to(card, {
+        scale: 1,
+        boxShadow: "0 4px 24px rgba(0, 0, 0, 0.08)",
+        duration: 0.3,
+        ease: "power2.out"
+      });
+    });
+  });
+}
+pricingCardHoverEffects();
+
+
+function pricingCardHoverTheme() {
+  document.querySelectorAll(".pricing-card").forEach(card => {
+    const textEls = card.querySelectorAll(".plan-price, .plan-duration, .plan-features li, .choose-plan");
+
+    card.addEventListener("mouseenter", () => {
+      // Animate background to black
+      gsap.to(card, {
+        backgroundColor: "#282834",
+        duration: 0.4,
+        ease: "power2.out"
+      });
+
+      // Animate text to white
+      gsap.to(textEls, {
+        color: "#fff",
+        duration: 0.3,
+        ease: "power1.out"
+      });
+
+      // Optional: button background
+      const button = card.querySelector(".choose-plan");
+      gsap.to(button, {
+        backgroundColor: "#fff",
+        color: "#000",
+        duration: 0.3,
+        ease: "power1.out"
+      });
+    });
+
+    card.addEventListener("mouseleave", () => {
+      // Animate background back to white
+      gsap.to(card, {
+        backgroundColor: "#fff",
+        duration: 0.4,
+        ease: "power2.out"
+      });
+
+      // Animate text back to original
+      gsap.to(textEls, {
+        color: "#23232b", // or your original text color
+        duration: 0.3,
+        ease: "power1.out"
+      });
+
+      // Restore button too
+      const button = card.querySelector(".choose-plan");
+      gsap.to(button, {
+        backgroundColor: "#d7264b",
+        color: "#fff",
+        duration: 0.3,
+        ease: "power1.out"
+      });
+    });
+  });
+}
+
+pricingCardHoverTheme();
+
+function magneticFooterLogo() {
+  const logo = document.querySelector(".footer-logo h2");
+
+  if (!logo) return;
+
+  logo.addEventListener("mousemove", (e) => {
+    const rect = logo.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+
+    gsap.to(logo, {
+      x: x * 0.2,
+      y: y * 0.2,
+      duration: 0.3,
+      ease: "power3.out",
+    });
+  });
+
+  logo.addEventListener("mouseleave", () => {
+    gsap.to(logo, {
+      x: 0,
+      y: 0,
+      duration: 0.4,
+      ease: "elastic.out(1, 0.4)",
+    });
+  });
+}
+
+magneticFooterLogo();
 
